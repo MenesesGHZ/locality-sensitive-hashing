@@ -1,0 +1,22 @@
+Start testing: Apr 22 01:34 PDT
+----------------------------------------------------------
+1/1 Testing: LSHTest
+1/1 Test: LSHTest
+Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/LSHTest"
+Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
+"LSHTest" start time: Apr 22 01:34 PDT
+Output:
+----------------------------------------------------------
+Running 2 test cases...
+
+[1;32;49m*** No errors detected
+[0;39;49m
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"LSHTest" end time: Apr 22 01:34 PDT
+"LSHTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 22 01:34 PDT

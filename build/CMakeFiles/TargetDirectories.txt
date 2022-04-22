@@ -1,4 +1,6 @@
-/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/rebuild_cache.dir
 /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/edit_cache.dir
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/test.dir
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/LSHTest.dir
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/rebuild_cache.dir
 /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/lsh_source.dir
 /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/lsh.dir

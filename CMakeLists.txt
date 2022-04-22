@@ -13,14 +13,14 @@ add_executable(${PROJECT_NAME} main.cpp)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# adding vendor libraries
-#add_library(lodepng vendor/lodepng/lodepng.cpp)
-#target_include_directories(lodepng PUBLIC "${PROJECT_SOURCE_DIR}/vendor/lodepng")
-
 # defining glitch library
 add_library(lsh_source src/lsh.cpp)
 target_include_directories(lsh_source PUBLIC "${PROJECT_SOURCE_DIR}/include/")
-target_link_libraries(${PROJECT_NAME} PUBLIC lsh_source)
+
+# add rapidcsv library
+add_library(rapidcsv INTERFACE)
+target_include_directories(rapidcsv INTERFACE lib)
+target_link_libraries(lsh_source PUBLIC rapidcsv)
 
 # add openmp library
 find_package(OpenMP)
@@ -37,3 +37,40 @@ target_link_libraries(lsh_source PUBLIC Eigen3::Eigen)
 # linking libraries and build/<include files>.h to executable
 target_link_libraries(${PROJECT_NAME} PUBLIC lsh_source)
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_BINARY_DIR}")
+
+
+# test configuration
+enable_testing()
+
+# Find boost test framework
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+add_definitions (-DBOOST_TEST_DYN_LINK)
+
+include_directories(${Boost_INCLUDE_DIRS})
+
+# The location of the test codes sources
+file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} test/*.cpp)
+
+# Find test codes
+foreach(testSrc ${TEST_SRCS})
+    #Extract the filename without an extension (NAME_WE)
+    get_filename_component(testName ${testSrc} NAME_WE)
+
+    # Add compile target
+    add_executable(${testName} ${testSrc})
+
+    # Add dependency
+    add_dependencies(${testName} lsh_source)
+
+    # link to Boost libraries AND your targets and dependencies
+    target_link_libraries(${testName} ${Boost_LIBRARIES})
+
+    # Location of the test binaries 
+    set_target_properties(${testName} PROPERTIES 
+    RUNTIME_OUTPUT_DIRECTORY  ${CMAKE_CURRENT_SOURCE_DIR}/build/testBin)
+
+    # Add the test to the collection of tests 
+    add_test(NAME ${testName} 
+             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/testBin 
+             COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/build/testBin/${testName} )
+endforeach(testSrc)

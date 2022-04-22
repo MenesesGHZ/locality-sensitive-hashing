@@ -3,6 +3,7 @@
 
 CMakeFiles/lsh.dir/main.cpp.o
  ../include/lsh.hpp
+ ../lib/rapidcsv.h
  /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/main.cpp
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core

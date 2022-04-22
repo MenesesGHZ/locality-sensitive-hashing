@@ -99,7 +99,6 @@ lsh_EXTERNAL_OBJECTS =
 lsh: CMakeFiles/lsh.dir/main.cpp.o
 lsh: CMakeFiles/lsh.dir/build.make
 lsh: liblsh_source.a
-lsh: liblsh_source.a
 lsh: CMakeFiles/lsh.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lsh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lsh.dir/link.txt --verbose=$(VERBOSE)
