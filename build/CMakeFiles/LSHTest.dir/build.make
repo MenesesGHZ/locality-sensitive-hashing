@@ -99,6 +99,7 @@ LSHTest_EXTERNAL_OBJECTS =
 testBin/LSHTest: CMakeFiles/LSHTest.dir/test/LSHTest.cpp.o
 testBin/LSHTest: CMakeFiles/LSHTest.dir/build.make
 testBin/LSHTest: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.71.0
+testBin/LSHTest: liblsh_source.a
 testBin/LSHTest: CMakeFiles/LSHTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable testBin/LSHTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LSHTest.dir/link.txt --verbose=$(VERBOSE)

@@ -1,10 +1,10 @@
-Start testing: Apr 22 01:34 PDT
+Start testing: Apr 22 02:47 PDT
 ----------------------------------------------------------
-1/1 Testing: LSHTest
-1/1 Test: LSHTest
+1/2 Testing: LSHTest
+1/2 Test: LSHTest
 Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/LSHTest"
 Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
-"LSHTest" start time: Apr 22 01:34 PDT
+"LSHTest" start time: Apr 22 02:47 PDT
 Output:
 ----------------------------------------------------------
 Running 2 test cases...
@@ -12,11 +12,30 @@ Running 2 test cases...
 [1;32;49m*** No errors detected
 [0;39;49m
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"LSHTest" end time: Apr 22 01:34 PDT
+"LSHTest" end time: Apr 22 02:47 PDT
 "LSHTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 22 01:34 PDT
+2/2 Testing: ReadDataset
+2/2 Test: ReadDataset
+Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/ReadDataset"
+Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
+"ReadDataset" start time: Apr 22 02:47 PDT
+Output:
+----------------------------------------------------------
+Running 2 test cases...
+
+[1;32;49m*** No errors detected
+[0;39;49m
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ReadDataset" end time: Apr 22 02:47 PDT
+"ReadDataset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 22 02:47 PDT

@@ -141,6 +141,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ReadDataset
+
+# Build rule for target.
+ReadDataset: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ReadDataset
+.PHONY : ReadDataset
+
+# fast build rule for target.
+ReadDataset/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/build
+.PHONY : ReadDataset/fast
+
+#=============================================================================
 # Target rules for targets named LSHTest
 
 # Build rule for target.
@@ -260,6 +273,33 @@ test/LSHTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LSHTest.dir/build.make CMakeFiles/LSHTest.dir/test/LSHTest.cpp.s
 .PHONY : test/LSHTest.cpp.s
 
+test/ReadDataset.o: test/ReadDataset.cpp.o
+
+.PHONY : test/ReadDataset.o
+
+# target to build an object file
+test/ReadDataset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.o
+.PHONY : test/ReadDataset.cpp.o
+
+test/ReadDataset.i: test/ReadDataset.cpp.i
+
+.PHONY : test/ReadDataset.i
+
+# target to preprocess a source file
+test/ReadDataset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.i
+.PHONY : test/ReadDataset.cpp.i
+
+test/ReadDataset.s: test/ReadDataset.cpp.s
+
+.PHONY : test/ReadDataset.s
+
+# target to generate assembly for a file
+test/ReadDataset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.s
+.PHONY : test/ReadDataset.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,6 +310,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... LSHTest"
+	@echo "... ReadDataset"
 	@echo "... lsh"
 	@echo "... lsh_source"
 	@echo "... main.o"
@@ -281,6 +322,9 @@ help:
 	@echo "... test/LSHTest.o"
 	@echo "... test/LSHTest.i"
 	@echo "... test/LSHTest.s"
+	@echo "... test/ReadDataset.o"
+	@echo "... test/ReadDataset.i"
+	@echo "... test/ReadDataset.s"
 .PHONY : help
 
 

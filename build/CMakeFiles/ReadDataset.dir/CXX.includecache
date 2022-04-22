@@ -46,9 +46,19 @@ vector
 BaseTsd.h
 -
 
-/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/main.cpp
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/ReadDataset.cpp
+boost/test/unit_test.hpp
+-
+boost/mpl/list.hpp
+-
+vector
+-
+string
+-
+bitset
+-
 lsh.hpp
-/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/lsh.hpp
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/lsh.hpp
 
 /usr/local/include/eigen3/Eigen/Cholesky
 Core
