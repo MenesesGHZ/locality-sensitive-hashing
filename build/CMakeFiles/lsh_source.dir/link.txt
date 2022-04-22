@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblsh_source.a CMakeFiles/lsh_source.dir/src/lsh.cpp.o
+/usr/bin/ranlib liblsh_source.a
