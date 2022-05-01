@@ -18,8 +18,11 @@ typedef boost::mpl::list<int,long> test_types;
 BOOST_AUTO_TEST_CASE_TEMPLATE( sorting_test, T, test_types )
 {
     bitset<0> state;
-    LSH lsh;
-    lsh.read_dataset("/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris.csv");
+
+    // test projection
+    LSH lsh = LSH{3, 3};
+    Eigen::VectorXd query{{1, 1, 1}};
+    lsh.projection(query);
 
     BOOST_CHECK_EQUAL(state.all(), true);  
 }

@@ -1,41 +1,51 @@
-Start testing: Apr 22 02:47 PDT
+Start testing: May 01 11:25 PDT
 ----------------------------------------------------------
 1/2 Testing: LSHTest
 1/2 Test: LSHTest
-Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/LSHTest"
-Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
-"LSHTest" start time: Apr 22 02:47 PDT
+Command: "/home/meneses/Documents/locality-sensitive-hashing/build/testBin/LSHTest"
+Directory: /home/meneses/Documents/locality-sensitive-hashing/build/testBin
+"LSHTest" start time: May 01 11:25 PDT
 Output:
 ----------------------------------------------------------
 Running 2 test cases...
+ 0.680375   0.59688 -0.329554
+-0.211234  0.823295  0.536459
+ 0.566198 -0.604897 -0.444451
+   0.10794  -0.270431    0.83239
+-0.0452059  0.0268018   0.271423
+  0.257742   0.904459   0.434594
 
 [1;32;49m*** No errors detected
 [0;39;49m
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"LSHTest" end time: Apr 22 02:47 PDT
+"LSHTest" end time: May 01 11:25 PDT
 "LSHTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/2 Testing: ReadDataset
 2/2 Test: ReadDataset
-Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/ReadDataset"
-Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
-"ReadDataset" start time: Apr 22 02:47 PDT
+Command: "/home/meneses/Documents/locality-sensitive-hashing/build/testBin/ReadDataset"
+Directory: /home/meneses/Documents/locality-sensitive-hashing/build/testBin
+"ReadDataset" start time: May 01 11:25 PDT
 Output:
 ----------------------------------------------------------
 Running 2 test cases...
+unknown location(0): [4;31;49mfatal error: in "LLTEST/sorting_test<int>": std::__ios_failure: basic_ios::clear: iostream error[0;39;49m
+/home/meneses/Documents/locality-sensitive-hashing/test/ReadDataset.cpp(18): [1;36;49mlast checkpoint: "sorting_test" test entry[0;39;49m
+unknown location(0): [4;31;49mfatal error: in "LLTEST/sorting_test<long>": std::__ios_failure: basic_ios::clear: iostream error[0;39;49m
+/home/meneses/Documents/locality-sensitive-hashing/test/ReadDataset.cpp(18): [1;36;49mlast checkpoint: "sorting_test" test entry[0;39;49m
 
-[1;32;49m*** No errors detected
+[1;31;49m*** 2 failures are detected in the test module "Sorting test"
 [0;39;49m
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
-Test Passed.
-"ReadDataset" end time: Apr 22 02:47 PDT
+Test Failed.
+"ReadDataset" end time: May 01 11:25 PDT
 "ReadDataset" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 22 02:47 PDT
+End testing: May 01 11:25 PDT

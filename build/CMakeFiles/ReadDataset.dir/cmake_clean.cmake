@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.o"
+  "CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.o.d"
   "testBin/ReadDataset"
   "testBin/ReadDataset.pdb"
 )

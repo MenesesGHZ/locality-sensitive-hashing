@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lsh.dir/main.cpp.o"
+  "CMakeFiles/lsh.dir/main.cpp.o.d"
   "lsh"
   "lsh.pdb"
 )

@@ -18,8 +18,8 @@ typedef boost::mpl::list<int,long> test_types;
 BOOST_AUTO_TEST_CASE_TEMPLATE( sorting_test, T, test_types )
 {
     bitset<0> state;
-    LSH lsh;
-    lsh.read_dataset("/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris.csv");
+    LSH lsh{0,0};
+    lsh.read_dataset("../dataset/iris.csv");
     std::vector<std::string> columnNames = lsh.dataset.GetColumnNames();
     std::vector<std::string> columnNames2{"Id","SepalLengthCm","SepalWidthCm","PetalLengthCm","PetalWidthCm","Species"};
     

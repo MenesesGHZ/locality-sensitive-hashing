@@ -1,3 +1,4 @@
-LSHTest 8 0.00426653
-ReadDataset 2 0.0094804
+LSHTest 1 0.00277963
+ReadDataset 0 0
 ---
+ReadDataset
