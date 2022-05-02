@@ -4,6 +4,7 @@
 #include <Eigen/Dense>
 #include <list>
 #include <string>
+#include <vector>
 #include <unordered_map>
 
 using Eigen::ArrayXd;
@@ -13,13 +14,12 @@ using Eigen::VectorXi;
 
 class LSH {
   private:
-    int n_hyperplanes, n_dimensions;
     std::unordered_map<std::string, std::list<int>> table;
-    MatrixXd hyperplanes;
+    MatrixXd hyperplanes, x;
+    std::vector<std::string> y;
 
   public:
-    MatrixXd data;
-    LSH(int, int);
+    LSH(int, MatrixXd, std::vector<std::string>);
     VectorXi projection(VectorXd);
     void fit();
     void predict(VectorXd) const;

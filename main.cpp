@@ -3,9 +3,9 @@
 #include "lsh.hpp"
 
 int main(){
-  ReadDataset reader;
-  reader.read(
-    "../iris.csv", 
+  DataLoader reader;
+  auto dataset = reader.read(
+    "/home/meneses/Documents/locality-sensitive-hashing/dataset/iris.csv", 
     {
       "SepalLengthCm",
       "SepalWidthCm",
@@ -14,9 +14,9 @@ int main(){
     }, 
     "Species"
   );
-  //LSH lsh = LSH{4, 4};
-  //lsh.fit();
-  //lsh.display_table();
+  LSH lsh{25, dataset.x, dataset.y};
+  lsh.fit();
+  lsh.display_table();
 
   return 0;
 }

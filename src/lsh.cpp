@@ -1,11 +1,11 @@
 #include "lsh.hpp"
 
-LSH::LSH(int n_hyperplanes, int n_dimensions) {
-  this->n_hyperplanes = n_hyperplanes;
-  this->n_dimensions = n_dimensions;
+LSH::LSH(int number_of_hyperplanes, MatrixXd x, std::vector<std::string> y) {
+  this->x = x;
+  this->y = y;
   this->hyperplanes = MatrixXd::Random(
-    this->n_hyperplanes,
-    this->n_dimensions
+    number_of_hyperplanes,
+    this->x.cols()
   );
 };
 
@@ -25,12 +25,13 @@ void LSH::predict(VectorXd query) const{
 }
 
 void LSH::fit(){
-  for(int i = 0; VectorXd row : this->data.rowwise()){
+  for(int i = 0; VectorXd row : this->x.rowwise()){
     std::string key = this->vec_to_string(this->projection(row));
-    if (!table.contains(key)){
-      table.insert(std::make_pair(key, std::list<int>{}));
+
+    if (!this->table.contains(key)){
+      this->table.insert(std::make_pair(key, std::list<int>{}));
     }
-    table[key].push_back(i);
+    this->table[key].push_back(i);
   }
 }
 
@@ -50,7 +51,7 @@ VectorXi LSH::projection(VectorXd query) {
 
 unsigned int LSH::hamming_distance(VectorXi v1, VectorXi v2){
   unsigned int distance = 0;
-  for(int i = 0; i < this->n_hyperplanes; i++){
+  for(int i = 0; i < this->x.cols(); i++){
     distance += v1[i] != v2[i];
   }
   return distance;

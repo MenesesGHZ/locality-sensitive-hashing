@@ -11,7 +11,7 @@ struct Dataset{
 };
 
 
-class ReadDataset {
+class DataLoader {
   public:
     Dataset read(std::string, std::vector<std::string>, std::string);
     //void display_dataset_head();
