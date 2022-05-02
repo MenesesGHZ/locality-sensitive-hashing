@@ -153,30 +153,17 @@ lsh_source/fast:
 .PHONY : lsh_source/fast
 
 #=============================================================================
-# Target rules for targets named LSHTest
+# Target rules for targets named reader
 
 # Build rule for target.
-LSHTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LSHTest
-.PHONY : LSHTest
+reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reader
+.PHONY : reader
 
 # fast build rule for target.
-LSHTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LSHTest.dir/build.make CMakeFiles/LSHTest.dir/build
-.PHONY : LSHTest/fast
-
-#=============================================================================
-# Target rules for targets named ReadDataset
-
-# Build rule for target.
-ReadDataset: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ReadDataset
-.PHONY : ReadDataset
-
-# fast build rule for target.
-ReadDataset/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/build
-.PHONY : ReadDataset/fast
+reader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/build
+.PHONY : reader/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -226,53 +213,29 @@ src/lsh.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_source.dir/build.make CMakeFiles/lsh_source.dir/src/lsh.cpp.s
 .PHONY : src/lsh.cpp.s
 
-test/LSHTest.o: test/LSHTest.cpp.o
-.PHONY : test/LSHTest.o
+src/reader.o: src/reader.cpp.o
+.PHONY : src/reader.o
 
 # target to build an object file
-test/LSHTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LSHTest.dir/build.make CMakeFiles/LSHTest.dir/test/LSHTest.cpp.o
-.PHONY : test/LSHTest.cpp.o
+src/reader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/reader.cpp.o
+.PHONY : src/reader.cpp.o
 
-test/LSHTest.i: test/LSHTest.cpp.i
-.PHONY : test/LSHTest.i
-
-# target to preprocess a source file
-test/LSHTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LSHTest.dir/build.make CMakeFiles/LSHTest.dir/test/LSHTest.cpp.i
-.PHONY : test/LSHTest.cpp.i
-
-test/LSHTest.s: test/LSHTest.cpp.s
-.PHONY : test/LSHTest.s
-
-# target to generate assembly for a file
-test/LSHTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LSHTest.dir/build.make CMakeFiles/LSHTest.dir/test/LSHTest.cpp.s
-.PHONY : test/LSHTest.cpp.s
-
-test/ReadDataset.o: test/ReadDataset.cpp.o
-.PHONY : test/ReadDataset.o
-
-# target to build an object file
-test/ReadDataset.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.o
-.PHONY : test/ReadDataset.cpp.o
-
-test/ReadDataset.i: test/ReadDataset.cpp.i
-.PHONY : test/ReadDataset.i
+src/reader.i: src/reader.cpp.i
+.PHONY : src/reader.i
 
 # target to preprocess a source file
-test/ReadDataset.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.i
-.PHONY : test/ReadDataset.cpp.i
+src/reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/reader.cpp.i
+.PHONY : src/reader.cpp.i
 
-test/ReadDataset.s: test/ReadDataset.cpp.s
-.PHONY : test/ReadDataset.s
+src/reader.s: src/reader.cpp.s
+.PHONY : src/reader.s
 
 # target to generate assembly for a file
-test/ReadDataset.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ReadDataset.dir/build.make CMakeFiles/ReadDataset.dir/test/ReadDataset.cpp.s
-.PHONY : test/ReadDataset.cpp.s
+src/reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/reader.cpp.s
+.PHONY : src/reader.cpp.s
 
 # Help Target
 help:
@@ -283,22 +246,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... LSHTest"
-	@echo "... ReadDataset"
 	@echo "... lsh"
 	@echo "... lsh_source"
+	@echo "... reader"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... src/lsh.o"
 	@echo "... src/lsh.i"
 	@echo "... src/lsh.s"
-	@echo "... test/LSHTest.o"
-	@echo "... test/LSHTest.i"
-	@echo "... test/LSHTest.s"
-	@echo "... test/ReadDataset.o"
-	@echo "... test/ReadDataset.i"
-	@echo "... test/ReadDataset.s"
+	@echo "... src/reader.o"
+	@echo "... src/reader.i"
+	@echo "... src/reader.s"
 .PHONY : help
 
 

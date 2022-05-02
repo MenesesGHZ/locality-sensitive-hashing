@@ -62,6 +62,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lsh.dir/DependInfo.cmake"
   "CMakeFiles/lsh_source.dir/DependInfo.cmake"
-  "CMakeFiles/LSHTest.dir/DependInfo.cmake"
-  "CMakeFiles/ReadDataset.dir/DependInfo.cmake"
+  "CMakeFiles/reader.dir/DependInfo.cmake"
   )

@@ -10,17 +10,21 @@ project(lsh VERSION 1.0)
 add_executable(${PROJECT_NAME} main.cpp)
 
 # specify C++ standard
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# defining glitch library
+# defining lsh library
 add_library(lsh_source src/lsh.cpp)
 target_include_directories(lsh_source PUBLIC "${PROJECT_SOURCE_DIR}/include/")
+
+# defining read dataset library
+add_library(reader src/reader.cpp)
+target_include_directories(reader PUBLIC "${PROJECT_SOURCE_DIR}/include/")
 
 # add rapidcsv library
 add_library(rapidcsv INTERFACE)
 target_include_directories(rapidcsv INTERFACE lib)
-target_link_libraries(lsh_source PUBLIC rapidcsv)
+target_link_libraries(reader PUBLIC rapidcsv)
 
 # add openmp library
 find_package(OpenMP)
@@ -33,9 +37,10 @@ endif()
 # add eigen library
 find_package(Eigen3 REQUIRED NO_MODULE)
 target_link_libraries(lsh_source PUBLIC Eigen3::Eigen)
+target_link_libraries(reader PUBLIC Eigen3::Eigen)
 
 # linking libraries and build/<include files>.h to executable
-target_link_libraries(${PROJECT_NAME} PUBLIC lsh_source)
+target_link_libraries(${PROJECT_NAME} PUBLIC lsh_source reader)
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_BINARY_DIR}")
 
 

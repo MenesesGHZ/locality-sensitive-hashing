@@ -8,13 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/meneses/Documents/locality-sensitive-hashing/main.cpp" "CMakeFiles/lsh.dir/main.cpp.o" "gcc" "CMakeFiles/lsh.dir/main.cpp.o.d"
+  "/home/meneses/Documents/locality-sensitive-hashing/src/reader.cpp" "CMakeFiles/reader.dir/src/reader.cpp.o" "gcc" "CMakeFiles/reader.dir/src/reader.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/meneses/Documents/locality-sensitive-hashing/build/CMakeFiles/lsh_source.dir/DependInfo.cmake"
-  "/home/meneses/Documents/locality-sensitive-hashing/build/CMakeFiles/reader.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

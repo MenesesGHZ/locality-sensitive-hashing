@@ -367,17 +367,22 @@ CMakeFiles/lsh.dir/main.cpp.o: \
  /usr/local/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/local/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/local/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/meneses/Documents/locality-sensitive-hashing/include/lsh.hpp \
- /usr/include/c++/9/iostream \
+ /home/meneses/Documents/locality-sensitive-hashing/include/reader.hpp \
+ /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_vector.h \
+ /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /home/meneses/Documents/locality-sensitive-hashing/lib/rapidcsv.h \
  /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
- /usr/include/c++/9/bits/fstream.tcc /usr/include/c++/9/map \
- /usr/include/c++/9/bits/stl_tree.h \
+ /usr/include/c++/9/bits/fstream.tcc /usr/include/c++/9/iostream \
+ /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/bits/stl_multimap.h \
- /usr/include/c++/9/bits/erase_if.h /usr/include/c++/9/vector \
- /usr/include/c++/9/bits/stl_uninitialized.h \
- /usr/include/c++/9/bits/stl_vector.h \
- /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc
+ /usr/include/c++/9/bits/erase_if.h \
+ /home/meneses/Documents/locality-sensitive-hashing/include/lsh.hpp \
+ /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
+ /usr/include/c++/9/bits/allocated_ptr.h /usr/include/c++/9/bits/list.tcc \
+ /usr/include/c++/9/unordered_map /usr/include/c++/9/bits/hashtable.h \
+ /usr/include/c++/9/bits/hashtable_policy.h \
+ /usr/include/c++/9/bits/unordered_map.h

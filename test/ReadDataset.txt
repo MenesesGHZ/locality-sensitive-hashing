@@ -18,9 +18,9 @@ typedef boost::mpl::list<int,long> test_types;
 BOOST_AUTO_TEST_CASE_TEMPLATE( sorting_test, T, test_types )
 {
     bitset<0> state;
-    LSH lsh{0,0};
-    lsh.read_dataset("../dataset/iris.csv");
-    std::vector<std::string> columnNames = lsh.dataset.GetColumnNames();
+    ReadDataset reader;
+    reader.read("../dataset/iris.csv");
+    std::vector<std::string> columnNames = reader.dataset.GetColumnNames();
     std::vector<std::string> columnNames2{"Id","SepalLengthCm","SepalWidthCm","PetalLengthCm","PetalWidthCm","Species"};
     
     if(columnNames.size() != columnNames2.size()){
@@ -34,7 +34,7 @@ BOOST_AUTO_TEST_CASE_TEMPLATE( sorting_test, T, test_types )
       }
     }
 
-    std::vector<float> row = lsh.dataset.GetRow<float>(0);
+    std::vector<float> row = reader.dataset.GetRow<float>(0);
     std::vector<float> row2{1,5.1,3.5,1.4,0.2,0};
     if(row.size() != row2.size()){
       BOOST_CHECK_EQUAL(state.all(), false);  

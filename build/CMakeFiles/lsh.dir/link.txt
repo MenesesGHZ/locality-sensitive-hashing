@@ -1,1 +1,1 @@
-/usr/bin/c++  -fopenmp CMakeFiles/lsh.dir/main.cpp.o -o lsh  liblsh_source.a 
+/usr/bin/c++  -fopenmp CMakeFiles/lsh.dir/main.cpp.o -o lsh  liblsh_source.a libreader.a 

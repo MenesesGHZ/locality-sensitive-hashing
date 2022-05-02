@@ -1,36 +1,33 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <Eigen/Dense>
-#include "rapidcsv.h"
+#include <list>
+#include <string>
+#include <unordered_map>
 
+using Eigen::ArrayXd;
 using Eigen::MatrixXd;
-using Eigen::RowVectorXd;
 using Eigen::VectorXd;
+using Eigen::VectorXi;
 
 class LSH {
   private:
-    int hyperplanes, dimensions;
-  
+    int n_hyperplanes, n_dimensions;
+    std::unordered_map<std::string, std::list<int>> table;
+    MatrixXd hyperplanes;
+
   public:
-    MatrixXd projections;
+    MatrixXd data;
+    LSH(int, int);
+    VectorXi projection(VectorXd);
+    void fit();
+    void predict(VectorXd) const;
 
-    LSH(int hyperplanes, int dimensions) : hyperplanes{hyperplanes}, dimensions{dimensions} {
-      this->projections = MatrixXd::Random(
-        this->hyperplanes,
-        this->dimensions
-      );
-    };
+    void approximate(VectorXd, int, float);
+    void construct(VectorXd, int, float);
 
-    rapidcsv::Document dataset;
-    void preprocessing();
-
-    void approximate(RowVectorXd, int, float);
-    void construct(RowVectorXd, int, float);
-    void search(RowVectorXd, RowVectorXd);
-    void projection(VectorXd);
-
-    void read_dataset(char*);
-    void display_dataset_head();
+    unsigned int hamming_distance(VectorXi, VectorXi);
+    std::string vec_to_string(VectorXi);
+    void display_table();
 };

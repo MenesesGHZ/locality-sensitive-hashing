@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_TEST_DYN_LINK
 
-CXX_INCLUDES = -I/home/meneses/Documents/locality-sensitive-hashing/include -isystem /usr/local/include/eigen3
+CXX_INCLUDES = -I/home/meneses/Documents/locality-sensitive-hashing/include -I/home/meneses/Documents/locality-sensitive-hashing/lib -isystem /usr/local/include/eigen3
 
 CXX_FLAGS =  -fopenmp -std=gnu++2a
 
