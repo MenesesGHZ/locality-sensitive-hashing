@@ -9,29 +9,47 @@ LSH::LSH(int number_of_hyperplanes, MatrixXd x, std::vector<std::string> y) {
   );
 };
 
-void LSH::approximate(VectorXd P, int c, float gamma){
-  // Algorithm 1: Finding an approximation to CCP(r).
-  return;
-}
-
-void LSH::construct(VectorXd P, int c, float gamma){
-  // Algorithm 2: Constructing the approximate nearest neighbor data structure
-  return;
-}
-
-void LSH::predict(VectorXd query) const{
-  // Algorithm 3: Searching for approximate nearest neighbor
-    return;
+std::string LSH::predict(VectorXd query){
+  std::string key = this->vec_to_string(this->projection(query));
+  std::string close_key = key;
+  unsigned int min_distance = UINT_MAX;
+  for(auto& it : this->optimized_table){
+    unsigned int distance = this->hamming_distance(key, it.first);
+    if (min_distance > distance){
+      close_key = it.first;
+      min_distance = distance;
+    }
+  }
+  return this->optimized_table[close_key];
 }
 
 void LSH::fit(){
+  // construct chaining hash table
   for(int i = 0; VectorXd row : this->x.rowwise()){
     std::string key = this->vec_to_string(this->projection(row));
-
     if (!this->table.contains(key)){
-      this->table.insert(std::make_pair(key, std::list<int>{}));
+      this->table.insert(std::make_pair(key, std::vector<std::string>{}));
     }
-    this->table[key].push_back(i);
+    this->table[key].push_back(this->y[i]);
+    i++;
+  }
+  
+  // construct optimize table
+  for (auto& it : this->table) {
+    std::map<std::string, int> counter_map;
+    std::string max_label;
+    int max = 0;
+    for (std::string label : it.second){
+      if (!counter_map.contains(label)){
+        counter_map.insert(std::make_pair(label, 0));
+      }
+      counter_map[label] += 1;
+      if(counter_map[label] > max){
+        max = counter_map[label];
+        max_label = label;
+      }
+    }
+    this->optimized_table[it.first] = max_label; 
   }
 }
 
@@ -49,10 +67,10 @@ VectorXi LSH::projection(VectorXd query) {
   return key;
 }
 
-unsigned int LSH::hamming_distance(VectorXi v1, VectorXi v2){
+unsigned int LSH::hamming_distance(std::string key1, std::string key2){
   unsigned int distance = 0;
-  for(int i = 0; i < this->x.cols(); i++){
-    distance += v1[i] != v2[i];
+  for(int i = 0; i < this->x.size(); i++){
+    distance += key1[i] != key2[i];
   }
   return distance;
 }
@@ -63,6 +81,14 @@ void LSH::display_table(){
     for (auto value : it.second){
       std::cout << " --> " << value;
     }
+    std::cout << std::endl;
+  }
+}
+
+void LSH::display_optimized_table(){
+  for (auto& it : this->optimized_table) {
+    std::cout << it.first;
+    std::cout << " --> " << it.second;
     std::cout << std::endl;
   }
 }

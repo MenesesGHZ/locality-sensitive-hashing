@@ -8,6 +8,7 @@
 struct Dataset{
   Eigen::MatrixXd x;
   std::vector<std::string> y;
+  std::vector<std::string> labels;
 };
 
 
