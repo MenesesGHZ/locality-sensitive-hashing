@@ -67,6 +67,10 @@ VectorXi LSH::projection(VectorXd query) {
   return key;
 }
 
+void LSH::evaluate(MatrixXd x, std::vector<std::string> y){
+    //print avg presicion + print avg time
+}
+
 unsigned int LSH::hamming_distance(std::string key1, std::string key2){
   unsigned int distance = 0;
   for(int i = 0; i < this->x.size(); i++){
