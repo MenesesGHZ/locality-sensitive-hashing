@@ -141,6 +141,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lsh_performance
+
+# Build rule for target.
+lsh_performance: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lsh_performance
+.PHONY : lsh_performance
+
+# fast build rule for target.
+lsh_performance/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/build
+.PHONY : lsh_performance/fast
+
+#=============================================================================
 # Target rules for targets named lsh_iris
 
 # Build rule for target.
@@ -300,6 +313,33 @@ test/lsh_iris.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/test/lsh_iris.cpp.s
 .PHONY : test/lsh_iris.cpp.s
 
+test/lsh_performance.o: test/lsh_performance.cpp.o
+
+.PHONY : test/lsh_performance.o
+
+# target to build an object file
+test/lsh_performance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/test/lsh_performance.cpp.o
+.PHONY : test/lsh_performance.cpp.o
+
+test/lsh_performance.i: test/lsh_performance.cpp.i
+
+.PHONY : test/lsh_performance.i
+
+# target to preprocess a source file
+test/lsh_performance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/test/lsh_performance.cpp.i
+.PHONY : test/lsh_performance.cpp.i
+
+test/lsh_performance.s: test/lsh_performance.cpp.s
+
+.PHONY : test/lsh_performance.s
+
+# target to generate assembly for a file
+test/lsh_performance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/test/lsh_performance.cpp.s
+.PHONY : test/lsh_performance.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -311,6 +351,7 @@ help:
 	@echo "... test"
 	@echo "... lsh"
 	@echo "... lsh_iris"
+	@echo "... lsh_performance"
 	@echo "... lsh_source"
 	@echo "... reader"
 	@echo "... main.o"
@@ -325,6 +366,9 @@ help:
 	@echo "... test/lsh_iris.o"
 	@echo "... test/lsh_iris.i"
 	@echo "... test/lsh_iris.s"
+	@echo "... test/lsh_performance.o"
+	@echo "... test/lsh_performance.i"
+	@echo "... test/lsh_performance.s"
 .PHONY : help
 
 

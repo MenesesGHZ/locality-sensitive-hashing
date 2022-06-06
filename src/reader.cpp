@@ -13,19 +13,3 @@ Dataset DataLoader::read(std::string filename, std::vector<std::string> features
     }
     return dataset;
 }
-
-//void ReadDataset::display_dataset_head(){
-//  std::vector<std::string> columnNames = this->dataset.GetColumnNames();
-//  const int size = columnNames.size();
-//  for(int i = 0; i < size; i++){
-//    std::cout << columnNames[i] << "    ";
-//  }
-//  std::cout << std::endl; 
-//  for(int i = 0; i < 5; i++){
-//    std::vector<float> row = this->dataset.GetRow<float>(i);
-//    for(int j = 0; j < size; j++){
-//      std::cout << row[j] << "            ";
-//    }
-//    std::cout << std::endl; 
-//  }
-//}

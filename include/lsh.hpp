@@ -26,7 +26,7 @@ class LSH {
     VectorXi projection(VectorXd);
     std::string predict(VectorXd);
     void fit();
-    void evaluate();
+    float evaluate(MatrixXd, std::vector<std::string>);
 
     unsigned int hamming_distance(std::string, std::string);
     std::string vec_to_string(VectorXi);

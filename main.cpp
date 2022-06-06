@@ -5,7 +5,7 @@
 int main(){
   DataLoader reader;
   auto dataset = reader.read(
-    "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris/train/iris.csv", 
+    "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris/train.csv", 
     {
       "SepalLengthCm",
       "SepalWidthCm",

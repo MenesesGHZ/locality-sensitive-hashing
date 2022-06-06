@@ -1,3 +1,5 @@
-lsh_iris 0 0
+lsh_iris 22 0.000742649
+performance_iris 0 0
+lsh_performance 2 0
 ---
-lsh_iris
+lsh_performance

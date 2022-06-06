@@ -16,33 +16,47 @@ using namespace std::chrono;
 BOOST_AUTO_TEST_SUITE(LLTEST)
 
 
-BOOST_AUTO_TEST_CASE( iris )
+BOOST_AUTO_TEST_CASE( performance )
 {
   bitset<0> state;
 
   DataLoader reader;
   auto trainset = reader.read(
-    "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris/train.csv", 
+    "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/performance/train.csv", 
     {
-      "SepalLengthCm",
-      "SepalWidthCm",
-      "PetalLengthCm",
-      "PetalWidthCm"
+      "age",
+      "gender",
+      "height_cm",
+      "weight_kg",
+      "body_fat",
+      "diastolic",
+      "systolic",
+      "gripForce",
+      "sit_and_bend_forward_cm",
+      "sit_ups_counts",
+      "broad_jump_cm"
     }, 
-    "Species"
+    "class"
   );
 
   auto testset = reader.read(
-    "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris/test.csv", 
+    "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/performance/test.csv", 
     {
-      "SepalLengthCm",
-      "SepalWidthCm",
-      "PetalLengthCm",
-      "PetalWidthCm"
+      "age",
+      "gender",
+      "height_cm",
+      "weight_kg",
+      "body_fat",
+      "diastolic",
+      "systolic",
+      "gripForce",
+      "sit_and_bend_forward_cm",
+      "sit_ups_counts",
+      "broad_jump_cm"
     }, 
-    "Species"
+    "class"
   );
-
+  
   std::cout<<std::endl;
   std::cout<<"Number of samples (training): "<<trainset.y.size()<<std::endl; 
   std::cout<<"Number of samples (testing): "<<testset.y.size()<<std::endl; 
@@ -64,7 +78,7 @@ BOOST_AUTO_TEST_CASE( iris )
       std::cout<<"Prediction Duration K="<< k <<"(microseconds): "<<prediction_duration.count()<<"μs"<<std::endl;
       std::cout<<std::endl;
   }
-  BOOST_CHECK_EQUAL(state.all(), true);  
+ BOOST_CHECK_EQUAL(state.all(), true);  
 }
 
 BOOST_AUTO_TEST_SUITE_END()

@@ -64,7 +64,7 @@ vector
 BaseTsd.h
 -
 
-/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/lsh_iris.cpp
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/performance_iris.cpp
 boost/test/unit_test.hpp
 -
 boost/mpl/list.hpp

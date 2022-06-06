@@ -25,15 +25,19 @@ std::string LSH::predict(VectorXd query){
 
 void LSH::fit(){
   // construct chaining hash table
-  for(int i = 0; VectorXd row : this->x.rowwise()){
+  std::cout<<"SIUUU"<<std::endl;
+  int i = 0;
+  for(VectorXd row : this->x.rowwise()){
+    std::cout<<"BEFORE PROJ"<<std::endl;
     std::string key = this->vec_to_string(this->projection(row));
+    std::cout<<"AFTER"<<std::endl;
     if (!this->table.contains(key)){
       this->table.insert(std::make_pair(key, std::vector<std::string>{}));
     }
     this->table[key].push_back(this->y[i]);
     i++;
   }
-  
+  std::cout<<"ALV !!!!"<<std::endl;
   // construct optimize table
   for (auto& it : this->table) {
     std::map<std::string, int> counter_map;
@@ -67,8 +71,14 @@ VectorXi LSH::projection(VectorXd query) {
   return key;
 }
 
-void LSH::evaluate(){
-    //print avg presicion + print avg time
+float LSH::evaluate(MatrixXd x_test, std::vector<std::string> y_test){
+    float acc = 0;
+    int i = 0;
+    for(VectorXd query : x_test.rowwise()){
+        acc += int(this->predict(query) == y_test[i]);
+        i++;
+    }
+    return acc / i;
 }
 
 unsigned int LSH::hamming_distance(std::string key1, std::string key2){
