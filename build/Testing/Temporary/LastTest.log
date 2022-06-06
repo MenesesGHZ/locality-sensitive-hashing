@@ -1,10 +1,74 @@
-Start testing: Jun 06 00:34 PDT
+Start testing: Jun 06 02:09 PDT
 ----------------------------------------------------------
-1/2 Testing: lsh_iris
-1/2 Test: lsh_iris
+1/3 Testing: lsh_body_performance
+1/3 Test: lsh_body_performance
+Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/lsh_body_performance"
+Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
+"lsh_body_performance" start time: Jun 06 02:09 PDT
+Output:
+----------------------------------------------------------
+Running 1 test case...
+
+Number of samples (training): 11999
+Number of samples (testing): 1394
+------------------
+Accuracy K=16: 33.9311%
+Training Duration K=16(milliseconds): 128ms
+Prediction Duration K=16(milliseconds): 0ms
+
+------------------
+Accuracy K=256: 44.6198%
+Training Duration K=256(milliseconds): 1289ms
+Prediction Duration K=256(milliseconds): 21ms
+
+
+[1;32;49m*** No errors detected
+[0;39;49m
+<end of output>
+Test time =  32.65 sec
+----------------------------------------------------------
+Test Passed.
+"lsh_body_performance" end time: Jun 06 02:10 PDT
+"lsh_body_performance" time elapsed: 00:00:32
+----------------------------------------------------------
+
+2/3 Testing: lsh_hearth_attack
+2/3 Test: lsh_hearth_attack
+Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/lsh_hearth_attack"
+Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
+"lsh_hearth_attack" start time: Jun 06 02:10 PDT
+Output:
+----------------------------------------------------------
+Running 1 test case...
+
+Number of samples (training): 288
+Number of samples (testing): 15
+------------------
+Accuracy K=16: 73.3333%
+Training Duration K=16(milliseconds): 4ms
+Prediction Duration K=16(milliseconds): 0ms
+
+------------------
+Accuracy K=256: 40%
+Training Duration K=256(milliseconds): 36ms
+Prediction Duration K=256(milliseconds): 0ms
+
+
+[1;32;49m*** No errors detected
+[0;39;49m
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"lsh_hearth_attack" end time: Jun 06 02:10 PDT
+"lsh_hearth_attack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: lsh_iris
+3/3 Test: lsh_iris
 Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/lsh_iris"
 Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
-"lsh_iris" start time: Jun 06 00:34 PDT
+"lsh_iris" start time: Jun 06 02:10 PDT
 Output:
 ----------------------------------------------------------
 Running 1 test case...
@@ -13,48 +77,23 @@ Number of samples (training): 141
 Number of samples (testing): 9
 ------------------
 Accuracy K=8: 66.6667%
-Training Duration K=8(microseconds): 1134μs
-Prediction Duration K=8(microseconds): 94μs
+Training Duration K=8(microseconds): 1083μs
+Prediction Duration K=8(microseconds): 15μs
 
 ------------------
 Accuracy K=56: 100%
-Training Duration K=56(microseconds): 3895μs
-Prediction Duration K=56(microseconds): 245μs
+Training Duration K=56(microseconds): 4055μs
+Prediction Duration K=56(microseconds): 50μs
 
 
 [1;32;49m*** No errors detected
 [0;39;49m
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"lsh_iris" end time: Jun 06 00:34 PDT
+"lsh_iris" end time: Jun 06 02:10 PDT
 "lsh_iris" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/2 Testing: lsh_performance
-2/2 Test: lsh_performance
-Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/lsh_performance"
-Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
-"lsh_performance" start time: Jun 06 00:34 PDT
-Output:
-----------------------------------------------------------
-Running 1 test case...
-
-Number of samples (training): 11999
-Number of samples (testing): 1394
-------------------
-unknown location(0): [4;31;49mfatal error: in "LLTEST/housing": memory access violation at address: 0x7ffeb17df000: no mapping at fault address[0;39;49m
-/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/lsh_performance.cpp(19): [1;36;49mlast checkpoint: "housing" test entry[0;39;49m
-
-[1;31;49m*** 1 failure is detected in the test module "Iris test"
-[0;39;49m
-<end of output>
-Test time =   0.25 sec
-----------------------------------------------------------
-Test Failed.
-"lsh_performance" end time: Jun 06 00:34 PDT
-"lsh_performance" time elapsed: 00:00:00
-----------------------------------------------------------
-
-End testing: Jun 06 00:34 PDT
+End testing: Jun 06 02:10 PDT

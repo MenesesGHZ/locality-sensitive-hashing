@@ -72,8 +72,9 @@ CMAKE_BINARY_DIR = /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lsh_performance.dir/all
 all: CMakeFiles/lsh_iris.dir/all
+all: CMakeFiles/lsh_body_performance.dir/all
+all: CMakeFiles/lsh_heart_attack.dir/all
 all: CMakeFiles/lsh_source.dir/all
 all: CMakeFiles/reader.dir/all
 all: CMakeFiles/lsh.dir/all
@@ -86,41 +87,14 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lsh_performance.dir/clean
 clean: CMakeFiles/lsh_iris.dir/clean
+clean: CMakeFiles/lsh_body_performance.dir/clean
+clean: CMakeFiles/lsh_heart_attack.dir/clean
 clean: CMakeFiles/lsh_source.dir/clean
 clean: CMakeFiles/reader.dir/clean
 clean: CMakeFiles/lsh.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/lsh_performance.dir
-
-# All Build rule for target.
-CMakeFiles/lsh_performance.dir/all: CMakeFiles/lsh_source.dir/all
-CMakeFiles/lsh_performance.dir/all: CMakeFiles/reader.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=5,6 "Built target lsh_performance"
-.PHONY : CMakeFiles/lsh_performance.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lsh_performance.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lsh_performance.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles 0
-.PHONY : CMakeFiles/lsh_performance.dir/rule
-
-# Convenience name for target.
-lsh_performance: CMakeFiles/lsh_performance.dir/rule
-
-.PHONY : lsh_performance
-
-# clean rule for target.
-CMakeFiles/lsh_performance.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/clean
-.PHONY : CMakeFiles/lsh_performance.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/lsh_iris.dir
@@ -130,7 +104,7 @@ CMakeFiles/lsh_iris.dir/all: CMakeFiles/lsh_source.dir/all
 CMakeFiles/lsh_iris.dir/all: CMakeFiles/reader.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=3,4 "Built target lsh_iris"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=7,8 "Built target lsh_iris"
 .PHONY : CMakeFiles/lsh_iris.dir/all
 
 # Build rule for subdir invocation for target.
@@ -151,13 +125,69 @@ CMakeFiles/lsh_iris.dir/clean:
 .PHONY : CMakeFiles/lsh_iris.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/lsh_body_performance.dir
+
+# All Build rule for target.
+CMakeFiles/lsh_body_performance.dir/all: CMakeFiles/lsh_source.dir/all
+CMakeFiles/lsh_body_performance.dir/all: CMakeFiles/reader.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=3,4 "Built target lsh_body_performance"
+.PHONY : CMakeFiles/lsh_body_performance.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lsh_body_performance.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lsh_body_performance.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles 0
+.PHONY : CMakeFiles/lsh_body_performance.dir/rule
+
+# Convenience name for target.
+lsh_body_performance: CMakeFiles/lsh_body_performance.dir/rule
+
+.PHONY : lsh_body_performance
+
+# clean rule for target.
+CMakeFiles/lsh_body_performance.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/clean
+.PHONY : CMakeFiles/lsh_body_performance.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lsh_heart_attack.dir
+
+# All Build rule for target.
+CMakeFiles/lsh_heart_attack.dir/all: CMakeFiles/lsh_source.dir/all
+CMakeFiles/lsh_heart_attack.dir/all: CMakeFiles/reader.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=5,6 "Built target lsh_heart_attack"
+.PHONY : CMakeFiles/lsh_heart_attack.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lsh_heart_attack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lsh_heart_attack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles 0
+.PHONY : CMakeFiles/lsh_heart_attack.dir/rule
+
+# Convenience name for target.
+lsh_heart_attack: CMakeFiles/lsh_heart_attack.dir/rule
+
+.PHONY : lsh_heart_attack
+
+# clean rule for target.
+CMakeFiles/lsh_heart_attack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/clean
+.PHONY : CMakeFiles/lsh_heart_attack.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/lsh_source.dir
 
 # All Build rule for target.
 CMakeFiles/lsh_source.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_source.dir/build.make CMakeFiles/lsh_source.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_source.dir/build.make CMakeFiles/lsh_source.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=7,8 "Built target lsh_source"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=9,10 "Built target lsh_source"
 .PHONY : CMakeFiles/lsh_source.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,7 +214,7 @@ CMakeFiles/lsh_source.dir/clean:
 CMakeFiles/reader.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=9,10 "Built target reader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=11,12 "Built target reader"
 .PHONY : CMakeFiles/reader.dir/all
 
 # Build rule for subdir invocation for target.

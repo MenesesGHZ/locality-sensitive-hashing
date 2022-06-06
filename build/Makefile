@@ -141,19 +141,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lsh_performance
-
-# Build rule for target.
-lsh_performance: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lsh_performance
-.PHONY : lsh_performance
-
-# fast build rule for target.
-lsh_performance/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/build
-.PHONY : lsh_performance/fast
-
-#=============================================================================
 # Target rules for targets named lsh_iris
 
 # Build rule for target.
@@ -165,6 +152,32 @@ lsh_iris: cmake_check_build_system
 lsh_iris/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/build
 .PHONY : lsh_iris/fast
+
+#=============================================================================
+# Target rules for targets named lsh_body_performance
+
+# Build rule for target.
+lsh_body_performance: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lsh_body_performance
+.PHONY : lsh_body_performance
+
+# fast build rule for target.
+lsh_body_performance/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/build
+.PHONY : lsh_body_performance/fast
+
+#=============================================================================
+# Target rules for targets named lsh_heart_attack
+
+# Build rule for target.
+lsh_heart_attack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lsh_heart_attack
+.PHONY : lsh_heart_attack
+
+# fast build rule for target.
+lsh_heart_attack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/build
+.PHONY : lsh_heart_attack/fast
 
 #=============================================================================
 # Target rules for targets named lsh_source
@@ -286,6 +299,60 @@ src/reader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/reader.cpp.s
 .PHONY : src/reader.cpp.s
 
+test/lsh_body_performance.o: test/lsh_body_performance.cpp.o
+
+.PHONY : test/lsh_body_performance.o
+
+# target to build an object file
+test/lsh_body_performance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/test/lsh_body_performance.cpp.o
+.PHONY : test/lsh_body_performance.cpp.o
+
+test/lsh_body_performance.i: test/lsh_body_performance.cpp.i
+
+.PHONY : test/lsh_body_performance.i
+
+# target to preprocess a source file
+test/lsh_body_performance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/test/lsh_body_performance.cpp.i
+.PHONY : test/lsh_body_performance.cpp.i
+
+test/lsh_body_performance.s: test/lsh_body_performance.cpp.s
+
+.PHONY : test/lsh_body_performance.s
+
+# target to generate assembly for a file
+test/lsh_body_performance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_body_performance.dir/build.make CMakeFiles/lsh_body_performance.dir/test/lsh_body_performance.cpp.s
+.PHONY : test/lsh_body_performance.cpp.s
+
+test/lsh_heart_attack.o: test/lsh_heart_attack.cpp.o
+
+.PHONY : test/lsh_heart_attack.o
+
+# target to build an object file
+test/lsh_heart_attack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/test/lsh_heart_attack.cpp.o
+.PHONY : test/lsh_heart_attack.cpp.o
+
+test/lsh_heart_attack.i: test/lsh_heart_attack.cpp.i
+
+.PHONY : test/lsh_heart_attack.i
+
+# target to preprocess a source file
+test/lsh_heart_attack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/test/lsh_heart_attack.cpp.i
+.PHONY : test/lsh_heart_attack.cpp.i
+
+test/lsh_heart_attack.s: test/lsh_heart_attack.cpp.s
+
+.PHONY : test/lsh_heart_attack.s
+
+# target to generate assembly for a file
+test/lsh_heart_attack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_heart_attack.dir/build.make CMakeFiles/lsh_heart_attack.dir/test/lsh_heart_attack.cpp.s
+.PHONY : test/lsh_heart_attack.cpp.s
+
 test/lsh_iris.o: test/lsh_iris.cpp.o
 
 .PHONY : test/lsh_iris.o
@@ -313,33 +380,6 @@ test/lsh_iris.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/test/lsh_iris.cpp.s
 .PHONY : test/lsh_iris.cpp.s
 
-test/lsh_performance.o: test/lsh_performance.cpp.o
-
-.PHONY : test/lsh_performance.o
-
-# target to build an object file
-test/lsh_performance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/test/lsh_performance.cpp.o
-.PHONY : test/lsh_performance.cpp.o
-
-test/lsh_performance.i: test/lsh_performance.cpp.i
-
-.PHONY : test/lsh_performance.i
-
-# target to preprocess a source file
-test/lsh_performance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/test/lsh_performance.cpp.i
-.PHONY : test/lsh_performance.cpp.i
-
-test/lsh_performance.s: test/lsh_performance.cpp.s
-
-.PHONY : test/lsh_performance.s
-
-# target to generate assembly for a file
-test/lsh_performance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_performance.dir/build.make CMakeFiles/lsh_performance.dir/test/lsh_performance.cpp.s
-.PHONY : test/lsh_performance.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -350,8 +390,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... lsh"
+	@echo "... lsh_body_performance"
+	@echo "... lsh_heart_attack"
 	@echo "... lsh_iris"
-	@echo "... lsh_performance"
 	@echo "... lsh_source"
 	@echo "... reader"
 	@echo "... main.o"
@@ -363,12 +404,15 @@ help:
 	@echo "... src/reader.o"
 	@echo "... src/reader.i"
 	@echo "... src/reader.s"
+	@echo "... test/lsh_body_performance.o"
+	@echo "... test/lsh_body_performance.i"
+	@echo "... test/lsh_body_performance.s"
+	@echo "... test/lsh_heart_attack.o"
+	@echo "... test/lsh_heart_attack.i"
+	@echo "... test/lsh_heart_attack.s"
 	@echo "... test/lsh_iris.o"
 	@echo "... test/lsh_iris.i"
 	@echo "... test/lsh_iris.s"
-	@echo "... test/lsh_performance.o"
-	@echo "... test/lsh_performance.i"
-	@echo "... test/lsh_performance.s"
 .PHONY : help
 
 

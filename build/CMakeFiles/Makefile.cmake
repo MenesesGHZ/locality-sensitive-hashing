@@ -62,8 +62,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/lsh_performance.dir/DependInfo.cmake"
   "CMakeFiles/lsh_iris.dir/DependInfo.cmake"
+  "CMakeFiles/lsh_body_performance.dir/DependInfo.cmake"
+  "CMakeFiles/lsh_heart_attack.dir/DependInfo.cmake"
   "CMakeFiles/lsh_source.dir/DependInfo.cmake"
   "CMakeFiles/reader.dir/DependInfo.cmake"
   "CMakeFiles/lsh.dir/DependInfo.cmake"
