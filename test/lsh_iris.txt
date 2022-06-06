@@ -5,6 +5,8 @@
 #include <boost/mpl/list.hpp>
 #include <bitset>
 #include "lsh.hpp"
+#include "reader.hpp"
+
 
 using namespace std;
 

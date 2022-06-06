@@ -24,7 +24,6 @@ target_include_directories(reader PUBLIC "${PROJECT_SOURCE_DIR}/include/")
 # add rapidcsv library
 add_library(rapidcsv INTERFACE)
 target_include_directories(rapidcsv INTERFACE lib)
-target_link_libraries(reader PUBLIC rapidcsv)
 
 # add openmp library
 find_package(OpenMP)
@@ -37,12 +36,11 @@ endif()
 # add eigen library
 find_package(Eigen3 REQUIRED NO_MODULE)
 target_link_libraries(lsh_source PUBLIC Eigen3::Eigen)
-target_link_libraries(reader PUBLIC Eigen3::Eigen)
+target_link_libraries(reader PUBLIC Eigen3::Eigen rapidcsv)
 
 # linking libraries and build/<include files>.h to executable
 target_link_libraries(${PROJECT_NAME} PUBLIC lsh_source reader)
 target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_BINARY_DIR}")
-
 
 # test configuration
 enable_testing()

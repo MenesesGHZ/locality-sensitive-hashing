@@ -3,9 +3,7 @@
 #include "lsh.hpp"
 
 int main(){
-  std::cout<<"ENTRE!!!! INIT !"<<std::endl;
   DataLoader reader;
-  std::cout<<"ENTRE!!!! READING !"<<std::endl;
   auto dataset = reader.read(
     "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/dataset/iris/train/iris.csv", 
     {
@@ -16,7 +14,6 @@ int main(){
     }, 
     "Species"
   );
-  std::cout<<"ENTRE!!!! LSH"<<std::endl;
   LSH lsh{50, dataset.x, dataset.y};
   lsh.fit();
   std::cout<<std::endl<<std::endl;
