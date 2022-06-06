@@ -1,3 +1,4 @@
-## Iris-setos -> 0
-## Iris-versicolor -> 1
-## Iris-virginica -> 2
+# Locality-Sensitive Hashing
+
+
+> LSH is based on the simple idea that, if two points are close together, than after a "projection" operation these two points will remain close together. 
