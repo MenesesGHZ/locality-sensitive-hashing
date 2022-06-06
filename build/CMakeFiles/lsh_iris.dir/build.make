@@ -100,6 +100,7 @@ testBin/lsh_iris: CMakeFiles/lsh_iris.dir/test/lsh_iris.cpp.o
 testBin/lsh_iris: CMakeFiles/lsh_iris.dir/build.make
 testBin/lsh_iris: /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.71.0
 testBin/lsh_iris: liblsh_source.a
+testBin/lsh_iris: libreader.a
 testBin/lsh_iris: CMakeFiles/lsh_iris.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable testBin/lsh_iris"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lsh_iris.dir/link.txt --verbose=$(VERBOSE)

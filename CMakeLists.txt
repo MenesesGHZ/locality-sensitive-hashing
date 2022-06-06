@@ -63,7 +63,7 @@ foreach(testSrc ${TEST_SRCS})
     add_executable(${testName} ${testSrc})
 
     # link to Boost libraries AND your targets and dependencies
-    target_link_libraries(${testName} ${Boost_LIBRARIES} lsh_source)
+    target_link_libraries(${testName} ${Boost_LIBRARIES} lsh_source reader)
 
     # Location of the test binaries 
     set_target_properties(${testName} PROPERTIES 

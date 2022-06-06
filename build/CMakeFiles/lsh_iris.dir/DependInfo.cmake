@@ -18,12 +18,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "../lib"
   "/usr/local/include/eigen3"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/lsh_source.dir/DependInfo.cmake"
+  "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/CMakeFiles/reader.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

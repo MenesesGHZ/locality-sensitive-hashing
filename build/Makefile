@@ -141,6 +141,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lsh_iris
+
+# Build rule for target.
+lsh_iris: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lsh_iris
+.PHONY : lsh_iris
+
+# fast build rule for target.
+lsh_iris/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/build
+.PHONY : lsh_iris/fast
+
+#=============================================================================
 # Target rules for targets named lsh_source
 
 # Build rule for target.
@@ -260,6 +273,33 @@ src/reader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/reader.dir/build.make CMakeFiles/reader.dir/src/reader.cpp.s
 .PHONY : src/reader.cpp.s
 
+test/lsh_iris.o: test/lsh_iris.cpp.o
+
+.PHONY : test/lsh_iris.o
+
+# target to build an object file
+test/lsh_iris.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/test/lsh_iris.cpp.o
+.PHONY : test/lsh_iris.cpp.o
+
+test/lsh_iris.i: test/lsh_iris.cpp.i
+
+.PHONY : test/lsh_iris.i
+
+# target to preprocess a source file
+test/lsh_iris.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/test/lsh_iris.cpp.i
+.PHONY : test/lsh_iris.cpp.i
+
+test/lsh_iris.s: test/lsh_iris.cpp.s
+
+.PHONY : test/lsh_iris.s
+
+# target to generate assembly for a file
+test/lsh_iris.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lsh_iris.dir/build.make CMakeFiles/lsh_iris.dir/test/lsh_iris.cpp.s
+.PHONY : test/lsh_iris.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,6 +310,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... lsh"
+	@echo "... lsh_iris"
 	@echo "... lsh_source"
 	@echo "... reader"
 	@echo "... main.o"
@@ -281,6 +322,9 @@ help:
 	@echo "... src/reader.o"
 	@echo "... src/reader.i"
 	@echo "... src/reader.s"
+	@echo "... test/lsh_iris.o"
+	@echo "... test/lsh_iris.i"
+	@echo "... test/lsh_iris.s"
 .PHONY : help
 
 

@@ -1,0 +1,26 @@
+Start testing: Jun 05 21:05 PDT
+----------------------------------------------------------
+1/1 Testing: lsh_iris
+1/1 Test: lsh_iris
+Command: "/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin/lsh_iris"
+Directory: /home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/build/testBin
+"lsh_iris" start time: Jun 05 21:05 PDT
+Output:
+----------------------------------------------------------
+Running 2 test cases...
+unknown location(0): [4;31;49mfatal error: in "LLTEST/sorting_test<int>": std::__ios_failure: basic_ios::clear: iostream error[0;39;49m
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/lsh_iris.cpp(18): [1;36;49mlast checkpoint: "sorting_test" test entry[0;39;49m
+unknown location(0): [4;31;49mfatal error: in "LLTEST/sorting_test<long>": std::__ios_failure: basic_ios::clear: iostream error[0;39;49m
+/home/meneses/Documents/PROYECTOS/locality-sensitive-hashing/test/lsh_iris.cpp(18): [1;36;49mlast checkpoint: "sorting_test" test entry[0;39;49m
+
+[1;31;49m*** 2 failures are detected in the test module "Iris test"
+[0;39;49m
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"lsh_iris" end time: Jun 05 21:05 PDT
+"lsh_iris" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 05 21:05 PDT
