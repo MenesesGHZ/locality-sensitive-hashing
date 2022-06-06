@@ -1,4 +1,0 @@
-LSHTest 1 0.00277963
-ReadDataset 0 0
----
-ReadDataset

@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/reader.dir/src/reader.cpp.o"
-  "CMakeFiles/reader.dir/src/reader.cpp.o.d"
   "libreader.a"
   "libreader.pdb"
 )

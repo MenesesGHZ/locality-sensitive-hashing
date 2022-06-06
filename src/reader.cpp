@@ -1,7 +1,7 @@
 #include "reader.hpp"
 
 Dataset DataLoader::read(std::string filename, std::vector<std::string> features, std::string label){
-    Dataset dataset;  
+    Dataset dataset;
     rapidcsv::Document doc(filename);
     dataset.x = Eigen::MatrixXd(doc.GetRowCount(), features.size());
     dataset.y = doc.GetColumn<std::string>(label);

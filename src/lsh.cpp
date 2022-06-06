@@ -67,7 +67,7 @@ VectorXi LSH::projection(VectorXd query) {
   return key;
 }
 
-void LSH::evaluate(MatrixXd x, std::vector<std::string> y){
+void LSH::evaluate(){
     //print avg presicion + print avg time
 }
 

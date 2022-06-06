@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lsh_source.dir/src/lsh.cpp.o"
-  "CMakeFiles/lsh_source.dir/src/lsh.cpp.o.d"
   "liblsh_source.a"
   "liblsh_source.pdb"
 )
